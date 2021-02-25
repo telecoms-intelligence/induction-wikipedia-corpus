@@ -64,7 +64,8 @@ The Wikipedia snapshot dump file, eventhough it is compressed, takes 13 GB of di
 and may take up to 2 hours of downloading time on fast networks (the limitation comes
 from the Wikipedia Web servers).
 ```bash
-$ wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2
+$ iso=en              # replace by your local wiki iso prefix
+$ wget https://dumps.wikimedia.org/${iso}wiki/latest/${iso}wiki-latest-pages-articles.xml.bz2
 ```
 
 # Walkthrough
@@ -75,7 +76,8 @@ $ source ~/dev/venv3/bin/activate
 
 * Build the corpus. That operation takes several hours
 ```bash
-$ python python/make_wiki_corpus.py enwiki-latest-pages-articles.xml.bz2 wiki_en.txt
+$ iso=en              # replace by your local wiki iso prefix
+$ python python/make_wiki_corpus.py ${iso}wiki-latest-pages-articles.xml.bz2 wiki_${iso}.txt
 Processed 10000 articles
 Processed 20000 articles
 Processed 30000 articles
@@ -91,7 +93,8 @@ Processed 100000 articles
 
 * Check the corpus
 ```bash
-$ python python/check_wiki_corpus.py wiki_en.txt
+$ iso=en              # replace by your local wiki iso prefix
+$ python python/check_wiki_corpus.py wiki_${iso}.txt
 ...
 best loved patriotic songs harperresource external links mp and realaudio 
 recordings available at the united states library of congress words sheet 
