@@ -53,6 +53,12 @@ $ source ~/dev/venv3/bin/activate
 ```bash
 $ deactivate
 ```
+
+## Library 
+```bash
+pip install gensim
+```
+
 ## Data
 The Wikipedia snapshot dump file, eventhough it is compressed, takes 13 GB of disk space,
 and may take up to 2 hours of downloading time on fast networks (the limitation comes
