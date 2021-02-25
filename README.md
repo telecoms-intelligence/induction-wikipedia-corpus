@@ -65,7 +65,7 @@ and may take up to 2 hours of downloading time on fast networks (the limitation 
 from the Wikipedia Web servers).
 ```bash
 $ iso=en              # replace by your local wiki iso prefix
-$ wget https://dumps.wikimedia.org/${iso}wiki/latest/${iso}wiki-latest-pages-articles.xml.bz2
+$ wget https://dumps.wikimedia.org/${iso}wiki/latest/${iso}wiki-latest-pages-articles.xml.bz2 -P ./dumps
 ```
 
 # Walkthrough
@@ -77,7 +77,7 @@ $ source ~/dev/venv3/bin/activate
 * Build the corpus. That operation takes several hours
 ```bash
 $ iso=en              # replace by your local wiki iso prefix
-$ python make_wiki_corpus.py ${iso}wiki-latest-pages-articles.xml.bz2 wiki_${iso}.txt
+$ python3 make_wiki_corpus.py ./dumps/${iso}wiki-latest-pages-articles.xml.bz2 ./texts/wiki_${iso}.txt
 Processed 10000 articles
 Processed 20000 articles
 Processed 30000 articles
@@ -94,7 +94,7 @@ Processed 100000 articles
 * Check the corpus
 ```bash
 $ iso=en              # replace by your local wiki iso prefix
-$ python check_wiki_corpus.py wiki_${iso}.txt
+$ python3 check_wiki_corpus.py ./texts/wiki_${iso}.txt
 ...
 best loved patriotic songs harperresource external links mp and realaudio 
 recordings available at the united states library of congress words sheet 
