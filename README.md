@@ -77,7 +77,7 @@ $ source ~/dev/venv3/bin/activate
 * Build the corpus. That operation takes several hours
 ```bash
 $ iso=en              # replace by your local wiki iso prefix
-$ python python/make_wiki_corpus.py ${iso}wiki-latest-pages-articles.xml.bz2 wiki_${iso}.txt
+$ python make_wiki_corpus.py ${iso}wiki-latest-pages-articles.xml.bz2 wiki_${iso}.txt
 Processed 10000 articles
 Processed 20000 articles
 Processed 30000 articles
@@ -94,7 +94,7 @@ Processed 100000 articles
 * Check the corpus
 ```bash
 $ iso=en              # replace by your local wiki iso prefix
-$ python python/check_wiki_corpus.py wiki_${iso}.txt
+$ python check_wiki_corpus.py wiki_${iso}.txt
 ...
 best loved patriotic songs harperresource external links mp and realaudio 
 recordings available at the united states library of congress words sheet 
